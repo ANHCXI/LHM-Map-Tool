@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>LHM Distance Finder</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+</head>
+<body>
+  <div class="container">
+    <h2>📍 Find Closest LHM Dealership</h2>
+    <p style="color:#666;margin-bottom:20px">Select a brand and enter your ZIP code to find the nearest location.</p>
+    
+    <div class="controls">
+      <div>
+        <label for="brandSelect">Brand</label>
+        <select id="brandSelect">
+          <option value="all">All Brands</option>
+        </select>
+      </div>
+      <div>
+        <label for="zipInput">Your ZIP Code</label>
+        <input type="text" id="zipInput" placeholder="e.g. 85382" maxlength="5" pattern="\d{5}">
+      </div>
+    </div>
+    
+    <button id="goBtn" disabled>Find Closest Dealership</button>
+    <div id="errorMsg" class="error"></div>
+    <div id="loading" class="loading">⏳ Finding your closest dealership...</div>
+    
+    <div id="result">
+      <div class="dealer-name">Closest: <span id="dealerName">--</span></div>
+      <div>Straight-line distance: <strong id="distanceText">--</strong> miles</div>
+    </div>
+    
+    <div id="map"></div>
+    
+    <div class="footer">
+      Map data © <a href="https://openstreetmap.org">OpenStreetMap</a> contributors • 
+      Tool built with <a href="https://leafletjs.com" target="_blank">Leaflet</a>
+    </div>
+  </div>
+
+  <!-- Leaflet JS (External Library) -->
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
