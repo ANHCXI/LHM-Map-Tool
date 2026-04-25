@@ -3,7 +3,7 @@ let dealerships = [];
 let zipCentroids = {};
 let dataLoaded = false;
 
-fetch('data.json')
+fetch('./data.json')
   .then(res => res.json())
   .then(data => {
     dealerships = data.dealerships;
