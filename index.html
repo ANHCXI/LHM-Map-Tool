@@ -4,8 +4,9 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>LHM Distance Finder</title>
-  <link rel="stylesheet" href="style.css" />
   <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+  <link rel="stylesheet" href="https://unpkg.com/leaflet-routing-machine@3.2.12/dist/leaflet-routing-machine.css" />
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
   <div class="container">
@@ -31,7 +32,7 @@
     
     <div id="result">
       <div class="dealer-name">Closest: <span id="dealerName">--</span></div>
-      <div>Straight-line distance: <strong id="distanceText">--</strong> miles</div>
+      <div>Driving distance: <strong id="distanceText">--</strong></div>
     </div>
     
     <div id="map"></div>
@@ -42,8 +43,8 @@
     </div>
   </div>
 
-  <!-- Leaflet JS (External Library) -->
   <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+  <script src="https://unpkg.com/leaflet-routing-machine@3.2.12/dist/leaflet-routing-machine.js"></script>
   <script src="script.js"></script>
 </body>
 </html>
